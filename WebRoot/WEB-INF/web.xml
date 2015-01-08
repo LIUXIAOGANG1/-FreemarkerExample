@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:web="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd http://xmlns.jcp.org/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.4">
   <servlet>
+  	<!-- 把example.Hello类映射为Hello，然后下面配置映射，如配置为*.do，-->
+  	<!-- 那么在地址栏中出现*.do后将跳转到example.Hello这个类的代码中 -->
     <servlet-name>Hello</servlet-name>
     <servlet-class>example.Hello</servlet-class>
   </servlet>
@@ -8,6 +10,8 @@
     <servlet-name>Hello</servlet-name>
     <url-pattern>*.do</url-pattern>
   </servlet-mapping>
+  
+  <!-- 欢迎页 -->
   <welcome-file-list>
     <welcome-file>index.html</welcome-file>
   </welcome-file-list>
